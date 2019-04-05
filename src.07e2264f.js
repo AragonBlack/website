@@ -36981,4 +36981,4 @@ if (module.hot) {
   module.hot.accept();
 }
 },{"react":"1n8/","react-dom":"NKHc","./styles/styles.less":"UYVh","normalize.css":"DOAq","styled-components":"tFSs","react-page-scroller":"pXSk","./components/grained":"L1KP","./components/screen.js":"2sQ3","./components/logo":"iqFt","./components/wordmark":"auLf","./components/nav":"z05L","./screens/splash":"1/tj","./screens/Two":"Uzhs","./screens/team":"anVS"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.ab7f0e91.map
+//# sourceMappingURL=/website/src.ab7f0e91.map
