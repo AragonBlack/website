@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Glitch from "./glitch";
 import Fade from "react-reveal/Fade";
 
 import "../styles/styles.less";

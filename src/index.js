@@ -1,20 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SVG from "react-inlinesvg";
 import "./styles/styles.less";
 import "normalize.css";
 import styled from "styled-components";
 import ReactPageScroller from "react-page-scroller";
-import YouTube from "react-youtube";
-import PageCounter from "./components/PageCounter";
 import Grained from "./components/grained";
 import Screen from "./components/screen.js";
 import Logo from "./components/logo";
 import Wordmark from "./components/wordmark";
 import Nav from "./components/nav";
 import Splash from "./screens/splash";
-
-import Skip from "./components/Skip";
 
 // import grained from "grained";
 

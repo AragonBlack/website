@@ -36,7 +36,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel src/index.html -p 1337",
-    "build": "cross-env NODE_ENV=production parcel build src/index.html --no-minify --public-url /"
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --no-minify --public-url /website/"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.10.17",
