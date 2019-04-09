@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { InView } from 'react-intersection-observer';
-import styled from 'styled-components';
-import Layout from '../components/Layout';
-import Logo from '../components/Logo';
-import Navigation from '../components/Navigation';
-import Woodmark from '../components/Woodmark';
+import React, { useEffect, useRef, useState } from 'react'
+import { InView } from 'react-intersection-observer'
+import styled from 'styled-components'
+import Layout from '../components/Layout'
+import Logo from '../components/Logo'
+import Navigation from '../components/Navigation'
+import Woodmark from '../components/Woodmark'
 
 const Content = props => {
   const [scrollIndex, setScrollIndex] = useState(null)
@@ -163,18 +163,6 @@ const Content = props => {
             </p>
           </Card>
           <Card>
-            <h3>Daniel Shavit</h3>
-            <h4>Community Lead</h4>
-            <p>
-              Daniel has a degree in economics from Bocconi University and worked as a digital payments consultant
-              advising entities such as Paypal, Mastercard, Unicredit and the Italian Banking Association on clearing
-              and settlement systems. Daniel was a crypto-currency evangelist in the early days then he co-founded
-              Horatii Partners. He researches decentralized governance focusing on the topics of protocolar governance
-              as well as taxonomical classification, security and experimentation of DAOs to enable mass adoption by
-              communities, productive organization and existing institutions.
-            </p>
-          </Card>
-          <Card>
             <h3>Nolwenn Jollivet</h3>
             <h4>Editorial Manager</h4>
             <p>
@@ -183,6 +171,60 @@ const Content = props => {
               various festivals as team coordinator and executive assistant. As a result, she is experienced in pro
               cultural worlds. Beside her coordination/organisation role, she has been a small format editor for the two
               passed years and writes fiction in her free time.
+            </p>
+          </Card>
+          <Card>
+            <h3>Xavier Seignard</h3>
+            <h4>UI/UX</h4>
+            <p>
+              Xavier is a JavaScript expert and freelance creative technologist based in Nantes, France. His main focus
+              is on interactive experiences, be they with web technologies or electronics, often both. Obsessed with
+              JavaScript: React, Vue.js and Node, he is an outstanding designer when it comes to electronics and always
+              has an Arduino or a Teensy next to him to build real life interaction or setup a large scale LED system.
+              Active member of the POW collective and founder of it's company named Drangies, his work has been
+              presented in many exhibitions, events and live shows.
+            </p>
+          </Card>
+          <Card>
+            <h3>Deam</h3>
+            <h4>Frontend</h4>
+            <p>
+              Deam has been a web developer for nearly 4 years, and is mostly self-taught through open source work.
+              Previously he worked for a small Danish startup, Peergrade, as a Full-stack developer. He started out in
+              the crypto space by contributing to Giveth and has been in the community for a year now. He has since
+              contributed to projects such as, Giveth Dapp, Giveth Riot Bot, Giveth Wall of Fame, Tennagraph, That
+              Planning Suite and Aragon UI.
+            </p>
+          </Card>
+          <Card>
+            <h3>Cory Dickson</h3>
+            <h4>Web 3</h4>
+            <p>
+              Cory is a software engineer and aspiring mathematician with a background in neural networks, looking to
+              bring the Semantic Web practices into smart contract development. He is Research focused around the
+              relationships between lie groups, non-linear stochastic processes, and control theory.
+            </p>
+          </Card>
+          <Card>
+            <h3>Billy Rennekamp</h3>
+            <h4>Curve Bonding</h4>
+            <p>
+              Billy is an artist, developer and co-founder of Bin Studio, a multidisciplinary research, design and
+              development studio based in Berlin, DE. In 2018 he received an ECF grant to continue work on
+              Clovers.Network, a game that rewards the creation of scarce art. He’s the author of EIP-1633 (Re-Fungible
+              Token) and active contributor to the Curation Market Community. He’s involved as a developer, researcher
+              and community member of a number of projects including Cosmos.Network, Gnosis.io, Relevant.community,
+              NewModels.io, Trust.support, MemeLords.com, ENSnifty.com and Doneth.org.
+            </p>
+          </Card>
+          <Card>
+            <h3>Thibault Boixière</h3>
+            <h4>Chief Redactor</h4>
+            <p>
+              Co-founder of Pando Network, Thibault has been journalist for two years, book reviewer and qualified in
+              modern literature and publishing. Thibault is also a writer in his free time. After a moment Ph.D student
+              in Canada where he studied literature he came back to join the Pando team. He’s interested in discourses
+              about the end of literature and particularly the possibilities of renewal of contemporary literary field.
             </p>
           </Card>
         </TeamContent>
@@ -335,8 +377,10 @@ const TeamSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 0rem;
 
   @media (min-width: 950px) {
+    margin-top: 16rem;
     .section-title {
       font-size: 7em;
     }
