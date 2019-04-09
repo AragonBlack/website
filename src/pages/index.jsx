@@ -37,12 +37,12 @@ const Content = props => {
         <InView as="div" onChange={inView => inView && setCurrentIndex(0)}>
           <p>
             Aragon Black is currently applying to become the third full-time team of the <a href="#">Aragon</a> project
-            and take part in its fight for freedom and full decentralization.
+            to take part in its fight for freedom through full decentralization.
           </p>
           <p>
             Aragon Black is the banner below which the Pando team has gathered to continue developing a decentralized
-            VCS enabling coordination and the raise of new collaborative projects, to carry the Aragon manifesto’s
-            values and finally to help in creating Aragon applications allowing human autonomy.
+            VCS enabling coordination with fundraising mechanisms for new collaborative projects. We carry the Aragon manifesto’s
+            values by helping create Aragon applications that allow for human autonomy.
           </p>
           <p>Welcome</p>
         </InView>
@@ -78,7 +78,7 @@ const Content = props => {
           <p>
             To strengthen its commitment to the Aragon movement, the PandoNetwork team has decided to apply to the Flock
             program as Aragon Black. This first Flock proposal covers six months of work. However, if the Aragon
-            community lends us its trust, we intend to re-apply to this program on the long run.
+            community lends us its trust, we intend to re-apply to this program for the long run.
           </p>
         </InView>
         <div className="section-title">
@@ -126,7 +126,7 @@ const Content = props => {
           </Card>
           <Card>
             <h3>Cem Dagdelen</h3>
-            <h4>Strategy lead</h4>
+            <h4>Strategy Lead</h4>
             <p>
               With a background in institutional Investment Banking, Cem has worked on establishing and raising for EM
               ETFs. He won a Financial Innovation award in 2013 for designing a borderless credit system. After working
@@ -198,10 +198,10 @@ const Content = props => {
           </Card>
           <Card>
             <h3>Cory Dickson</h3>
-            <h4>Web 3</h4>
+            <h4>Web3</h4>
             <p>
               Cory is a software engineer and aspiring mathematician with a background in neural networks, looking to
-              bring the Semantic Web practices into smart contract development. He is Research focused around the
+              bring the Semantic Web practices into smart contract development. He's research has been focused around the
               relationships between lie groups, non-linear stochastic processes, and control theory.
             </p>
           </Card>
@@ -266,7 +266,7 @@ const HeroSection = styled.div`
     height: 50px;
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     #logo {
       height: 350px;
     }
@@ -275,7 +275,7 @@ const HeroSection = styled.div`
     }
   }
 
-  @media (min-width: 1170px) {
+  @media (min-width: 1366px) {
     flex-direction: row;
   }
 `
@@ -307,7 +307,7 @@ const Section = styled.section`
     margin-bottom: 2rem;
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     flex-direction: row;
     height: 100vh;
     margin: 0 5rem;
@@ -328,7 +328,7 @@ const Section = styled.section`
     }
   }
 
-  @media (min-width: 1170px) {
+  @media (min-width: 1366px) {
     margin: 0 10rem;
 
     div:nth-child(1) {
@@ -351,17 +351,17 @@ const ProposalSection = styled.section`
   #proposal-video {
     margin-top: 6rem;
     width: 100%;
-    height: 25%;
+    height: 50%;
   }
 
   @media (min-width: 700px) {
     #proposal-video {
       width: 80%;
-      height: 30%;
+      height: 50%;
     }
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 1366px) {
     #proposal-video {
       width: 900px;
       height: 500px;
@@ -377,10 +377,10 @@ const TeamSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 0rem;
+  margin-top: 1rem;
 
-  @media (min-width: 950px) {
-    margin-top: 16rem;
+  @media (min-width: 1040px) {
+    margin-top: 10rem;
     .section-title {
       font-size: 7em;
     }
@@ -394,10 +394,10 @@ const TeamContent = styled.section`
 
   margin: 2rem 2rem;
 
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     margin: 6rem 8rem;
   }
-  @media (min-width: 1170px) {
+  @media (min-width: 1366px) {
     margin: 6rem 16rem;
   }
 `
