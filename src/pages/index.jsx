@@ -1,16 +1,15 @@
-import { useStore } from 'laco-react'
-import React, { useEffect, useRef } from 'react'
-import { InView } from 'react-intersection-observer'
-import styled from 'styled-components'
-import Layout from '../components/Layout'
-import Logo from '../components/Logo'
-import Navigation from '../components/Navigation'
-import Woodmark from '../components/Woodmark'
-import { changeCurrentIndex, changeScrollIndex, NavStore } from '../stores/navigation'
+import React, { useEffect, useRef, useState } from 'react';
+import { InView } from 'react-intersection-observer';
+import styled from 'styled-components';
+import Layout from '../components/Layout';
+import Logo from '../components/Logo';
+import Navigation from '../components/Navigation';
+import Woodmark from '../components/Woodmark';
 
-export default props => {
-  const { scrollIndex } = useStore(NavStore)
-  const items = Array.from({ length: 4 }, () => useRef(null))
+const Content = props => {
+  const [scrollIndex, setScrollIndex] = useState(null)
+  const [currentIndex, setCurrentIndex] = useState(null)
+  const items = Array.from({ length: 5 }, () => useRef(null))
 
   useEffect(() => {
     if (scrollIndex != null) {
@@ -19,23 +18,23 @@ export default props => {
         left: 0,
         behavior: 'smooth',
       })
-      changeScrollIndex(null)
+      setScrollIndex(null)
     }
   })
 
   return (
-    <Layout>
-      <Navigation />
+    <Container>
+      <Navigation currentIndex={currentIndex} setScrollIndex={idx => setScrollIndex(idx)} />
 
-      <Container>
+      <HeroSection ref={items[4]}>
         <Logo />
-        <InView as="div" onChange={inView => inView && changeCurrentIndex(null)}>
+        <InView as="div" onChange={inView => inView && setCurrentIndex(null)}>
           <Woodmark />
         </InView>
-      </Container>
+      </HeroSection>
 
       <Section ref={items[0]}>
-        <InView as="div" onChange={inView => inView && changeCurrentIndex(0)}>
+        <InView as="div" onChange={inView => inView && setCurrentIndex(0)}>
           <p>
             Aragon Black is currently applying to become the third full-time team of the <a href="#">Aragon</a> project
             and take part in its fight for freedom and full decentralization.
@@ -70,7 +69,7 @@ export default props => {
       </Section>
 
       <Section ref={items[1]}>
-        <InView as="div" onChange={inView => inView && changeCurrentIndex(1)}>
+        <InView as="div" onChange={inView => inView && setCurrentIndex(1)}>
           <p>
             Aragon Black is a team whose core members come majoritarily from the PandoNetwork team [mostly known in the
             ecosystem for the development of the pando protocol]. The PandoNetwork team has been working closely with
@@ -87,8 +86,8 @@ export default props => {
         </div>
       </Section>
 
-      <Test ref={items[2]}>
-        <InView id="proposal-video" as="div" onChange={inView => inView && changeCurrentIndex(2)}>
+      <ProposalSection ref={items[2]}>
+        <div id="proposal-video">
           <iframe
             style={{ overflow: 'hidden', height: '100%', width: '100%' }}
             height="100%"
@@ -98,15 +97,22 @@ export default props => {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-        </InView>
-        <div className="section-title">
-          <h2>Values</h2>
         </div>
-      </Test>
+        <InView as="div" onChange={inView => inView && setCurrentIndex(2)}>
+          <div className="section-title">
+            <h2>Values</h2>
+          </div>
+        </InView>
+      </ProposalSection>
 
-      <Test ref={items[3]}>
-        {/* <Carousel centered infinite arrows slidesPerPage={1}>
-          <div>
+      <TeamSection ref={items[3]}>
+        <InView as="div" onChange={inView => inView && setCurrentIndex(3)}>
+          <div className="section-title">
+            <h2>Team</h2>
+          </div>
+        </InView>
+        <TeamContent>
+          <Card>
             <h3>Olivier Sarrouy</h3>
             <h4>Tech Lead</h4>
             <p>
@@ -117,8 +123,8 @@ export default props => {
               implications of distributed organizations and blockchain technologies. He has now resigned from academıa
               to work full time on the blockchain projects he leads.
             </p>
-          </div>
-          <div>
+          </Card>
+          <Card>
             <h3>Cem Dagdelen</h3>
             <h4>Strategy lead</h4>
             <p>
@@ -131,8 +137,8 @@ export default props => {
               consulting which targets the betterment and implementation of DAO based initiatives. Cem is a competitive
               sailor since age 9 and writes about art philosophy and critique for a Turkish lifestyle magazine.
             </p>
-          </div>
-          <div>
+          </Card>
+          <Card>
             <h3>Alexandre Rouxel</h3>
             <h4>Research Lead</h4>
             <p>
@@ -143,8 +149,8 @@ export default props => {
               Decentralized Licence, he initiates partnerships to create labs that will soon be experimenting on Pando
               protocol.
             </p>
-          </div>
-          <div>
+          </Card>
+          <Card>
             <h3>Daniel Shavit</h3>
             <h4>Community Lead</h4>
             <p>
@@ -155,8 +161,8 @@ export default props => {
               as well as taxonomical classification, security and experimentation of DAOs to enable mass adoption by
               communities, productive organization and existing institutions.
             </p>
-          </div>
-          <div>
+          </Card>
+          <Card>
             <h3>Daniel Shavit</h3>
             <h4>Community Lead</h4>
             <p>
@@ -167,8 +173,8 @@ export default props => {
               as well as taxonomical classification, security and experimentation of DAOs to enable mass adoption by
               communities, productive organization and existing institutions.
             </p>
-          </div>
-          <div>
+          </Card>
+          <Card>
             <h3>Nolwenn Jollivet</h3>
             <h4>Editorial Manager</h4>
             <p>
@@ -178,18 +184,32 @@ export default props => {
               cultural worlds. Beside her coordination/organisation role, she has been a small format editor for the two
               passed years and writes fiction in her free time.
             </p>
-          </div>
-        </Carousel> */}
-        <InView as="div" onChange={inView => inView && changeCurrentIndex(3)} />
-        <div className="section-title">
-          <h2>Team</h2>
-        </div>
-      </Test>
-    </Layout>
+          </Card>
+        </TeamContent>
+      </TeamSection>
+    </Container>
   )
 }
 
+// Prevent flickering because of Layout component rendering
+export default props => (
+  <Layout>
+    <Content />
+  </Layout>
+)
+
 const Container = styled.div`
+  .section-title {
+    text-transform: uppercase;
+    color: rgba(114, 114, 114, 0.5);
+    font-family: 'Tungsten', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1;
+  }
+`
+
+const HeroSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +224,7 @@ const Container = styled.div`
     height: 50px;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 950px) {
     #logo {
       height: 350px;
     }
@@ -223,7 +243,6 @@ const Section = styled.section`
   align-items: center;
   flex-direction: column-reverse;
   margin: 6rem 2rem;
-  opacity: 0.8;
 
   p {
     font-size: 18px;
@@ -246,22 +265,7 @@ const Section = styled.section`
     margin-bottom: 2rem;
   }
 
-  .section-title {
-    text-transform: uppercase;
-    color: rgba(47, 52, 52, 0.4);
-    font-family: 'Tungsten', sans-serif;
-    font-size: 4em;
-    font-weight: bold;
-    line-height: 1;
-  }
-
-  @media (min-width: 540px) {
-    div:nth-child(2) {
-      margin-left: 4rem;
-    }
-  }
-
-  @media (min-width: 769px) {
+  @media (min-width: 950px) {
     flex-direction: row;
     height: 100vh;
     margin: 0 5rem;
@@ -295,115 +299,84 @@ const Section = styled.section`
   }
 `
 
-const Test = styled.section`
+const ProposalSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
   height: 100vh;
-  opacity: 0.8;
-
-  .section-title {
-    text-transform: uppercase;
-    color: rgba(47, 52, 52, 0.4);
-    font-family: 'Tungsten', sans-serif;
-    font-size: 7em;
-    font-weight: bold;
-    line-height: 1;
-    margin-bottom: 4rem;
-  }
 
   #proposal-video {
+    margin-top: 6rem;
     width: 100%;
     height: 25%;
   }
 
-  @media (min-width: 540px) {
+  @media (min-width: 700px) {
     #proposal-video {
       width: 80%;
       height: 30%;
     }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 950px) {
     #proposal-video {
       width: 900px;
       height: 500px;
+    }
+    .section-title {
+      font-size: 7em;
     }
   }
 `
 
 const TeamSection = styled.section`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0 5rem;
-  color: #ffffff;
-  opacity: 0.8;
 
-  .BrainhubCarousel {
-    margin-left: 3rem;
-    max-width: 50%;
-  }
-
-  .BrainhubCarousel__arrows {
-    background-color: transparent;
-    span {
-      border-color: #00f0e0;
-    }
-  }
-
-  .BrainhubCarouselItem div {
-    background-color: rgba(13, 18, 18, 0.5);
-    border-radius: 2px;
-    padding: 1rem;
-    width: 100%;
-  }
-
-  .section-title {
-    text-transform: uppercase;
-    color: rgba(47, 52, 52, 0.4);
-    font-family: 'Tungsten', sans-serif;
-    font-size: 4em;
-    font-weight: bold;
-    line-height: 1;
-  }
-
-  h3 {
-    font-family: 'Tungsten';
-    font-weight: bold;
-    font-size: 3em;
-    text-transform: uppercase;
-    line-height: 1em;
-  }
-
-  h4 {
-    font-family: 'Tungsten';
-    font-weight: bold;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    color: rgba(47, 52, 52, 1);
-  }
-
-  p {
-    padding: 0.5rem;
-    background-color: rgba(13, 18, 18, 0.5);
-    margin-bottom: 1rem;
-    width: fit-content;
-  }
-
-  @media (min-width: 769px) {
+  @media (min-width: 950px) {
     .section-title {
       font-size: 7em;
-      margin-left: 8rem;
     }
   }
+`
 
+const TeamContent = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 2rem 2rem;
+
+  @media (min-width: 950px) {
+    margin: 6rem 8rem;
+  }
   @media (min-width: 1170px) {
-    margin: 0 10rem;
-    .section-title {
-      margin-left: 12rem;
-    }
+    margin: 6rem 16rem;
+  }
+`
+
+const Card = styled.div`
+  margin-bottom: 2rem;
+  width: 100%;
+  background-color: rgba(13, 18, 18, 0.5);
+  color: #fff;
+  height: 100%;
+  padding: 1rem;
+
+  h3 {
+    font-size: 32px;
+    font-family: 'Tungsten';
+  }
+  h4 {
+    font-size: 24px;
+    font-family: 'Tungsten';
+    color: rgb(112, 112, 112);
+  }
+
+  @media (min-width: 1400px) {
+    width: 46%;
   }
 `

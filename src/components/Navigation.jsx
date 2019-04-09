@@ -1,14 +1,12 @@
-import { useStore } from 'laco-react'
 import React from 'react'
 import styled from 'styled-components'
-import { changeScrollIndex, NavStore } from '../stores/navigation'
 
 const items = ['About', 'Proposal', 'Values', 'Team']
 
 export default props => {
-  const { currentIndex } = useStore(NavStore)
+  const { currentIndex, setScrollIndex } = props
   const renderContent = items.map((item, idx) => (
-    <li key={item} className={currentIndex === idx ? 'active' : ''} onClick={() => changeScrollIndex(idx)}>
+    <li key={item} className={currentIndex === idx ? 'active' : ''} onClick={() => setScrollIndex(idx)}>
       {item}
     </li>
   ))
@@ -33,9 +31,9 @@ const Nav = styled.div`
     z-index: 1;
 
     ul {
-      color: #383e3e;
+      color: rgba(114, 114, 114, 0.5);
       font-family: 'Tungsten', sans-serif;
-      font-size: 24px;
+      font-size: 28px;
       text-transform: uppercase;
       display: flex;
       flex-direction: row;

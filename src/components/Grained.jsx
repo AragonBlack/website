@@ -22,18 +22,17 @@ export default class Grained extends React.Component {
 }
 
 const Wrapper = styled.div`
-  background-color: #0d1212;
   background-image: linear-gradient(
     135deg,
-    #0d1212 49.69%,
-    #1f2424 49.69%,
-    #1f2424 50%,
-    #0d1212 50%,
-    #0d1212 99.69%,
-    #1f2424 99.69%,
-    #1f2424 100%
+    #1f1f1f 49.66%,
+    #2e2e2e 49.66%,
+    #2e2e2e 50%,
+    #1f1f1f 50%,
+    #1f1f1f 99.66%,
+    #2e2e2e 99.66%,
+    #2e2e2e 100%
   );
-  background-size: 227.69px 227.69px;
+  background-size: 205.06px 205.06px;
   min-height: 100vh;
   width: 100vw;
   * {
