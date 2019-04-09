@@ -186,7 +186,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
-            <h3>Deam</h3>
+            <h3>Deam Hansen</h3>
             <h4>Frontend</h4>
             <p>
               Deam has been a web developer for nearly 4 years, and is mostly self-taught through open source work.
