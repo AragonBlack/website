@@ -407,7 +407,6 @@ const Card = styled.div`
   width: 100%;
   background-color: rgba(13, 18, 18, 0.5);
   color: #fff;
-  height: 100%;
   padding: 1rem;
 
   h3 {

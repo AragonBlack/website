@@ -110,11 +110,6 @@ const Wrapper = styled.div`
     animation: dash 4s ease-out forwards;
   }
 
-  #head-shape {
-    -webkit-filter: drop-shadow(3px 3px 2px rgba(256, 256, 256, 0.7));
-    filter: drop-shadow(3px 3px 2px rgba(256, 256, 256, 0.7));
-  }
-
   @keyframes dash {
     to {
       stroke-dashoffset: 0;
