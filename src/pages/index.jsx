@@ -399,10 +399,13 @@ const TeamSection = styled.section`
   align-items: center;
   margin-top: 0rem;
 
+  .section-title {
+    margin-bottom: 4rem;
+  }
+
   @media (min-width: 950px) {
     margin-top: 16rem;
     .section-title {
-      margin-bottom: 4rem;
       font-size: 7em;
     }
   }
@@ -430,11 +433,21 @@ const Card = styled.div`
   padding: 1rem;
 
   img {
-    width: 150px;
+    width: 100px;
     position: absolute;
-    right: 50px;
-    top: -100px;
+    right: 40px;
+    top: -60px;
   }
+
+  @media (min-width: 480px) {
+    img {
+      width: 150px;
+      position: absolute;
+      right: 50px;
+      top: -100px;
+    }
+  }
+
   h3 {
     font-size: 32px;
     font-family: 'Tungsten';
