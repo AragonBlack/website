@@ -168,12 +168,13 @@ const Content = props => {
             <h3>Daniel Shavit</h3>
             <h4>Community Lead</h4>
             <p>
-              Daniel has a degree in economics from Bocconi University and worked as a digital payments consultant
-              advising entities such as Paypal, Mastercard, Unicredit and the Italian Banking Association on clearing
-              and settlement systems. Daniel was a crypto-currency evangelist in the early days then he co-founded
-              Horatii Partners. He researches decentralized governance focusing on the topics of protocolar governance
-              as well as taxonomical classification, security and experimentation of DAOs to enable mass adoption by
-              communities, productive organization and existing institutions.
+              Daniel is a governance researcher focused on the topics of protocolar governance, taxonomic classification
+              and experimentation of DAOs, as well as open-science with the Abstract Machine project for Pando
+              (immutable, uncensorable and self-governed journals) . Daniel has a degree in economics from Bocconi
+              University with a thesis on the perverse monetary, economic and political effects of natural resource
+              booms. In a previous life he worked as a payments consultant advising entities such as Atos Worldline,
+              Paypal, Mastercard, Unicredit and the Italian Banking Association on clearing and settlement and dispute
+              systems.
             </p>
           </Card>
           <Card>
