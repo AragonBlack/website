@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import styled from 'styled-components'
+import member3 from '../assets/images/alexandre.png'
+import member9 from '../assets/images/billy.png'
+import member2 from '../assets/images/cem.png'
+import member8 from '../assets/images/cory.png'
+import member4 from '../assets/images/daniel.png'
+import member7 from '../assets/images/deam.png'
+import member5 from '../assets/images/nolwenn.png'
+import member1 from '../assets/images/olivier.png'
+import member10 from '../assets/images/thibault.png'
+import member6 from '../assets/images/xavier.png'
 import Layout from '../components/Layout'
 import Logo from '../components/Logo'
 import Navigation from '../components/Navigation'
@@ -113,6 +123,7 @@ const Content = props => {
         </InView>
         <TeamContent>
           <Card>
+            <img src={member1} alt="profile" />
             <h3>Olivier Sarrouy</h3>
             <h4>Tech Lead</h4>
             <p>
@@ -125,6 +136,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member2} alt="profile" />
             <h3>Cem Dagdelen</h3>
             <h4>Strategy lead</h4>
             <p>
@@ -139,6 +151,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member3} alt="profile" />
             <h3>Alexandre Rouxel</h3>
             <h4>Research Lead</h4>
             <p>
@@ -151,6 +164,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member4} alt="profile" />
             <h3>Daniel Shavit</h3>
             <h4>Community Lead</h4>
             <p>
@@ -163,6 +177,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member5} alt="profile" />
             <h3>Nolwenn Jollivet</h3>
             <h4>Editorial Manager</h4>
             <p>
@@ -174,6 +189,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member6} alt="profile" />
             <h3>Xavier Seignard</h3>
             <h4>UI/UX</h4>
             <p>
@@ -186,6 +202,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member7} alt="profile" />
             <h3>Deam Hansen</h3>
             <h4>Frontend</h4>
             <p>
@@ -197,6 +214,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member8} alt="profile" />
             <h3>Cory Dickson</h3>
             <h4>Web 3</h4>
             <p>
@@ -206,6 +224,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member9} alt="profile" />
             <h3>Billy Rennekamp</h3>
             <h4>Curve Bonding</h4>
             <p>
@@ -218,6 +237,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member10} alt="profile" />
             <h3>Thibault Boixière</h3>
             <h4>Chief Redactor</h4>
             <p>
@@ -382,6 +402,7 @@ const TeamSection = styled.section`
   @media (min-width: 950px) {
     margin-top: 16rem;
     .section-title {
+      margin-bottom: 4rem;
       font-size: 7em;
     }
   }
@@ -391,7 +412,6 @@ const TeamContent = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   margin: 2rem 2rem;
 
   @media (min-width: 950px) {
@@ -403,12 +423,18 @@ const TeamContent = styled.section`
 `
 
 const Card = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
   width: 100%;
   background-color: rgba(13, 18, 18, 0.5);
   color: #fff;
   padding: 1rem;
 
+  img {
+    width: 150px;
+    position: absolute;
+    right: 50px;
+    top: -100px;
+  }
   h3 {
     font-size: 32px;
     font-family: 'Tungsten';
