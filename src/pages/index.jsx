@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import styled from 'styled-components'
+import member3 from '../assets/images/alexandre.png'
+import member9 from '../assets/images/billy.png'
+import member2 from '../assets/images/cem.png'
+import member8 from '../assets/images/cory.png'
+import member4 from '../assets/images/daniel.png'
+import member7 from '../assets/images/deam.png'
+import member5 from '../assets/images/nolwenn.png'
+import member1 from '../assets/images/olivier.png'
+import member10 from '../assets/images/thibault.png'
+import member6 from '../assets/images/xavier.png'
 import Layout from '../components/Layout'
 import Logo from '../components/Logo'
 import Navigation from '../components/Navigation'
@@ -41,8 +51,8 @@ const Content = props => {
           </p>
           <p>
             Aragon Black is the banner below which the Pando team has gathered to continue developing a decentralized
-            VCS enabling coordination with fundraising mechanisms for new collaborative projects. We carry the Aragon manifesto’s
-            values by helping create Aragon applications that allow for human autonomy.
+            VCS enabling coordination and the rise of new collaborative projects, to carry the Aragon manifesto’s values
+            and finally to help in creating Aragon applications allowing human autonomy.
           </p>
           <p>Welcome</p>
         </InView>
@@ -113,6 +123,7 @@ const Content = props => {
         </InView>
         <TeamContent>
           <Card>
+            <img src={member1} alt="profile" />
             <h3>Olivier Sarrouy</h3>
             <h4>Tech Lead</h4>
             <p>
@@ -125,6 +136,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member2} alt="profile" />
             <h3>Cem Dagdelen</h3>
             <h4>Strategy Lead</h4>
             <p>
@@ -139,6 +151,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member3} alt="profile" />
             <h3>Alexandre Rouxel</h3>
             <h4>Research Lead</h4>
             <p>
@@ -151,18 +164,21 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member4} alt="profile" />
             <h3>Daniel Shavit</h3>
             <h4>Community Lead</h4>
             <p>
-              Daniel has a degree in economics from Bocconi University and worked as a digital payments consultant
-              advising entities such as Paypal, Mastercard, Unicredit and the Italian Banking Association on clearing
-              and settlement systems. Daniel was a crypto-currency evangelist in the early days then he co-founded
-              Horatii Partners. He researches decentralized governance focusing on the topics of protocolar governance
-              as well as taxonomical classification, security and experimentation of DAOs to enable mass adoption by
-              communities, productive organization and existing institutions.
+              Daniel is a governance researcher focused on the topics of protocolar governance, taxonomic classification
+              and experimentation of DAOs, as well as open-science with the Abstract Machine project for Pando
+              (immutable, uncensorable and self-governed journals) . Daniel has a degree in economics from Bocconi
+              University with a thesis on the perverse monetary, economic and political effects of natural resource
+              booms. In a previous life he worked as a payments consultant advising entities such as Atos Worldline,
+              Paypal, Mastercard, Unicredit and the Italian Banking Association on clearing and settlement and dispute
+              systems.
             </p>
           </Card>
           <Card>
+            <img src={member5} alt="profile" />
             <h3>Nolwenn Jollivet</h3>
             <h4>Editorial Manager</h4>
             <p>
@@ -174,6 +190,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member6} alt="profile" />
             <h3>Xavier Seignard</h3>
             <h4>UI/UX</h4>
             <p>
@@ -186,6 +203,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member7} alt="profile" />
             <h3>Deam Hansen</h3>
             <h4>Frontend</h4>
             <p>
@@ -197,6 +215,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member8} alt="profile" />
             <h3>Cory Dickson</h3>
             <h4>Web3</h4>
             <p>
@@ -206,6 +225,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member9} alt="profile" />
             <h3>Billy Rennekamp</h3>
             <h4>Curve Bonding</h4>
             <p>
@@ -218,6 +238,7 @@ const Content = props => {
             </p>
           </Card>
           <Card>
+            <img src={member10} alt="profile" />
             <h3>Thibault Boixière</h3>
             <h4>Chief Redactor</h4>
             <p>
@@ -381,6 +402,7 @@ const TeamSection = styled.section`
 
   @media (min-width: 1040px) {
     margin-top: 10rem;
+
     .section-title {
       font-size: 7em;
     }
@@ -391,7 +413,6 @@ const TeamContent = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   margin: 2rem 2rem;
 
   @media (min-width: 1040px) {
@@ -403,12 +424,27 @@ const TeamContent = styled.section`
 `
 
 const Card = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
   width: 100%;
   background-color: rgba(13, 18, 18, 0.5);
   color: #fff;
-  height: 100%;
   padding: 1rem;
+
+  img {
+    width: 100px;
+    position: absolute;
+    right: 40px;
+    top: -60px;
+  }
+
+  @media (min-width: 480px) {
+    img {
+      width: 150px;
+      position: absolute;
+      right: 50px;
+      top: -100px;
+    }
+  }
 
   h3 {
     font-size: 32px;
