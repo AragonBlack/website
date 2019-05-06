@@ -46,8 +46,11 @@ const Content = props => {
       <Section ref={items[0]}>
         <InView as="div" onChange={inView => inView && setCurrentIndex(0)}>
           <p>
-            Aragon Black is currently applying to become the third full-time team of the <a href="#">Aragon</a> project
-            and take part in its fight for freedom and full decentralization.
+            Aragon Black is the third full-team of the{' '}
+            <a href="https://aragon.org/" target="_blank" rel="noopener noreferrer">
+              Aragon
+            </a>{' '}
+            project taking part in its fight for freedom and full decentralization.
           </p>
           <p>
             Aragon Black is the banner below which the Pando team has gathered to continue developing a decentralized
