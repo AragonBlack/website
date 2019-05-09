@@ -12,7 +12,14 @@ export default props => {
   ))
   return (
     <Nav>
-      <ul>{renderContent}</ul>
+      <ul>
+        {renderContent}
+        <li>
+          <a href="https://blog.aragon.black/" target="_blank" rel="noopener noreferrer">
+            Blog
+          </a>
+        </li>
+      </ul>
     </Nav>
   )
 }
@@ -55,6 +62,15 @@ const Nav = styled.div`
         color: #ffffff;
         border-bottom: #00f0e0 solid 2px;
       }
+    }
+  }
+
+  a {
+    color: rgba(114, 114, 114, 0.5);
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffff;
     }
   }
 
