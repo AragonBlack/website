@@ -220,8 +220,8 @@ const Content = props => {
             <h4>Web3</h4>
             <p>
               Cory is a software engineer and aspiring mathematician with a background in neural networks, looking to
-              bring the Semantic Web practices into smart contract development. He's research has been focused around the
-              relationships between lie groups, non-linear stochastic processes, and control theory.
+              bring the Semantic Web practices into smart contract development. Co-founder of dOrg. His research has been focused around
+              using emerging language embedding processes for linked data. Hacking on EIP-1780 (Semantic Interface Registry)
             </p>
           </Card>
           <Card>
@@ -401,7 +401,7 @@ const TeamSection = styled.section`
   margin-top: 1rem;
 
   @media (min-width: 1040px) {
-    margin-top: 10rem;
+    margin-top: 16rem;
 
     .section-title {
       font-size: 7em;
