@@ -416,13 +416,13 @@ const TeamContent = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2rem 2rem;
+  margin: 6rem 2rem;
 
   @media (min-width: 1040px) {
     margin: 6rem 8rem;
   }
   @media (min-width: 1366px) {
-    margin: 6rem 16rem;
+    margin: 12rem 16rem;
   }
 `
 
