@@ -91,7 +91,7 @@ const Content = props => {
           <p>
             To strengthen its commitment to the Aragon movement, the PandoNetwork team has decided to apply to the Flock
             program as Aragon Black. This first Flock proposal covers six months of work. However, if the Aragon
-            community lends us its trust, we intend to re-apply to this program on the long run.
+            community lends us its trust, we intend to re-apply to this program for the long run.
           </p>
         </InView>
         <div className="section-title">
@@ -141,7 +141,7 @@ const Content = props => {
           <Card>
             <img src={member2} alt="profile" />
             <h3>Cem Dagdelen</h3>
-            <h4>Strategy lead</h4>
+            <h4>Strategy Lead</h4>
             <p>
               With a background in institutional Investment Banking, Cem has worked on establishing and raising for EM
               ETFs. He won a Financial Innovation award in 2013 for designing a borderless credit system. After working
@@ -220,11 +220,11 @@ const Content = props => {
           <Card>
             <img src={member8} alt="profile" />
             <h3>Cory Dickson</h3>
-            <h4>Web 3</h4>
+            <h4>Web3</h4>
             <p>
               Cory is a software engineer and aspiring mathematician with a background in neural networks, looking to
-              bring the Semantic Web practices into smart contract development. He is Research focused around the
-              relationships between lie groups, non-linear stochastic processes, and control theory.
+              bring the Semantic Web practices into smart contract development. Co-founder of dOrg. His research has been focused around
+              using emerging language embedding processes for linked data. Hacking on EIP-1780 (Semantic Interface Registry)
             </p>
           </Card>
           <Card>
@@ -290,7 +290,7 @@ const HeroSection = styled.div`
     height: 50px;
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     #logo {
       height: 350px;
     }
@@ -299,7 +299,7 @@ const HeroSection = styled.div`
     }
   }
 
-  @media (min-width: 1170px) {
+  @media (min-width: 1366px) {
     flex-direction: row;
   }
 `
@@ -331,7 +331,7 @@ const Section = styled.section`
     margin-bottom: 2rem;
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     flex-direction: row;
     height: 100vh;
     margin: 0 5rem;
@@ -352,7 +352,7 @@ const Section = styled.section`
     }
   }
 
-  @media (min-width: 1170px) {
+  @media (min-width: 1366px) {
     margin: 0 10rem;
 
     div:nth-child(1) {
@@ -375,17 +375,17 @@ const ProposalSection = styled.section`
   #proposal-video {
     margin-top: 6rem;
     width: 100%;
-    height: 25%;
+    height: 50%;
   }
 
   @media (min-width: 700px) {
     #proposal-video {
       width: 80%;
-      height: 30%;
+      height: 50%;
     }
   }
 
-  @media (min-width: 950px) {
+  @media (min-width: 1366px) {
     #proposal-video {
       width: 900px;
       height: 500px;
@@ -401,14 +401,11 @@ const TeamSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 0rem;
+  margin-top: 1rem;
 
-  .section-title {
-    margin-bottom: 4rem;
-  }
-
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     margin-top: 16rem;
+
     .section-title {
       font-size: 7em;
     }
@@ -421,10 +418,10 @@ const TeamContent = styled.section`
   justify-content: space-between;
   margin: 2rem 2rem;
 
-  @media (min-width: 950px) {
+  @media (min-width: 1040px) {
     margin: 6rem 8rem;
   }
-  @media (min-width: 1170px) {
+  @media (min-width: 1366px) {
     margin: 6rem 16rem;
   }
 `

@@ -162,6 +162,7 @@ const Layout = ({ children }) => (
   <>
     <GlobalStyle />
     <Helmet>
+      <title>Aragon Black</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
       <script crossOrigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver" />
     </Helmet>
