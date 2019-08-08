@@ -17,9 +17,15 @@ import Navigation from '../components/Navigation'
 import Woodmark from '../components/Woodmark'
 
 const Content = props => {
-  const [scrollIndex, setScrollIndex] = useState(window.location.hash === '#jobs' ? 4 : null)
+  const [scrollIndex, setScrollIndex] = useState(null)
   const [currentIndex, setCurrentIndex] = useState(null)
   const items = Array.from({ length: 5 }, () => useRef(null))
+  
+  useEffect(() => {
+    if (scrollIndex !== 4 && window.location.hash === '#jobs') {
+      setScrollIndex(4)
+    }
+  }, [])
 
   useEffect(() => {
     if (scrollIndex != null) {
