@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const items = ['About', 'Proposal', 'Values', 'Team']
+const items = ['About', 'Proposal', 'Values', 'Team', 'Jobs']
 
 export default props => {
   const { currentIndex, setScrollIndex } = props

@@ -223,8 +223,9 @@ const Content = props => {
             <h4>Web3</h4>
             <p>
               Cory is a software engineer and aspiring mathematician with a background in neural networks, looking to
-              bring the Semantic Web practices into smart contract development. Co-founder of dOrg. His research has been focused around
-              using emerging language embedding processes for linked data. Hacking on EIP-1780 (Semantic Interface Registry)
+              bring the Semantic Web practices into smart contract development. Co-founder of dOrg. His research has
+              been focused around using emerging language embedding processes for linked data. Hacking on EIP-1780
+              (Semantic Interface Registry)
             </p>
           </Card>
           <Card>
@@ -253,6 +254,65 @@ const Content = props => {
           </Card>
         </TeamContent>
       </TeamSection>
+      <JobsSection ref={items[4]}>
+        <InView as="div" onChange={inView => inView && setCurrentIndex(4)}>
+          <div className="section-title">
+            <h2>JOBS</h2>
+          </div>
+        </InView>
+        <JobContent>
+          <JobCard>
+            <h3>Aragon Black - Solidity Engineer</h3>
+            <h4>Full Time</h4>
+            <p>
+              Aragon Black is searching for a Full-Time Solidity Engineer to join its ranks. You’ll work mostly on
+              Aragon Fundraising development, improve core-component of the Aragon Stack and keep on developing and
+              enhancing the pando protocol. You’ll work closely with the Tech Lead of Aragon Black and the research team
+              on Aragon Labs and aragonOS. We expect a good, even perfect awareness of Aragon Network and Ethereum.
+            </p>
+            <br />
+
+            <h4>Technical Requirements</h4>
+            <ul>
+              <li>Develop, ship and maintain quality smart contracts for the Aragon platform</li>
+              <li>Code review & elaboration of documentation</li>
+              <li>High quality of maintainable and cleanliness code</li>
+              <li>Strong unit testing culture</li>
+              <li>Ability to ship high quality, well crafted code running on Ethereum</li>
+            </ul>
+            <br />
+
+            <h4>Human Requirements</h4>
+            <ul>
+              <li>A strong passion for decentralization and a rage for political change!</li>
+              <li>Autonomous nature & proactive attitude</li>
+              <li>Patient & tenacious</li>
+              <li>Time self-management</li>
+            </ul>
+            <br />
+
+            <h4>Great-to-Have’s</h4>
+            <ul>
+              <li>Familiarity to the Aragon architecture</li>
+              <li>Awareness of bonding curves architectures</li>
+              <li>Cool attitude (Yep, we have a reputation to maintain :)</li>
+            </ul>
+            <br />
+
+            <h4>This way</h4>
+            <p>
+              To apply, please send an email to{' '}
+              <a href="mailto:nun@aragon.black" target="_blank">
+                nun@aragon.black
+              </a>{' '}
+              with the subject [Solidity Engineer] and the following informations; CV (make sure to highlight experience
+              and contribution in open-source projects), GitHub (obviously we expect open-source developers to have an
+              active one), Twitter/Reddit profiles. We’re certainly not big fans of LinkedIn but go ahead if you have
+              one!
+            </p>
+          </JobCard>
+        </JobContent>
+      </JobsSection>
     </Container>
   )
 }
@@ -426,6 +486,34 @@ const TeamContent = styled.section`
   }
 `
 
+const JobsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  @media (min-width: 1040px) {
+    .section-title {
+      font-size: 7em;
+    }
+  }
+`
+
+const JobContent = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 6rem 2rem;
+
+  @media (min-width: 1040px) {
+    margin: 6rem 8rem;
+  }
+  @media (min-width: 1366px) {
+    margin: 8rem 16rem;
+  }
+`
+
 const Card = styled.div`
   margin-bottom: 10rem;
   width: 100%;
@@ -461,5 +549,50 @@ const Card = styled.div`
 
   @media (min-width: 1400px) {
     width: 46%;
+  }
+`
+
+const JobCard = styled.div`
+  margin-bottom: 10rem;
+  width: 100%;
+  background-color: rgba(13, 18, 18, 0.5);
+  color: #fff;
+  padding: 1rem;
+
+  @media (min-width: 480px) {
+    img {
+      width: 150px;
+      position: absolute;
+      right: 50px;
+      top: -100px;
+    }
+  }
+
+  h3 {
+    font-size: 42px;
+    font-family: 'Tungsten';
+  }
+  h4 {
+    font-size: 32px;
+    font-family: 'Tungsten';
+    color: rgb(112, 112, 112);
+  }
+  p,
+  li {
+    font-size: 18px;
+  }
+
+  ul {
+    margin-left: 1.5rem;
+
+    li {
+      list-style-type: initial;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 2px solid #00f0e0;
   }
 `
