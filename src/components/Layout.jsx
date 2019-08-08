@@ -165,6 +165,7 @@ const Layout = ({ children }) => (
       <title>Aragon Black</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
       <script crossOrigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145335364-2" />
     </Helmet>
     <Grained>{children}</Grained>
   </>
