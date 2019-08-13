@@ -11,6 +11,7 @@ import member5 from '../assets/images/nolwenn.png'
 import member1 from '../assets/images/olivier.png'
 import member10 from '../assets/images/thibault.png'
 import member6 from '../assets/images/xavier.png'
+import hiringProcess from '../assets/images/hiring-process.png'
 import Layout from '../components/Layout'
 import Logo from '../components/Logo'
 import Navigation from '../components/Navigation'
@@ -20,7 +21,7 @@ const Content = props => {
   const [scrollIndex, setScrollIndex] = useState(null)
   const [currentIndex, setCurrentIndex] = useState(null)
   const items = Array.from({ length: 5 }, () => useRef(null))
-  
+
   useEffect(() => {
     if (scrollIndex !== 4 && window.location.hash === '#jobs') {
       setScrollIndex(4)
@@ -316,6 +317,7 @@ const Content = props => {
               active one), Twitter/Reddit profiles. We’re certainly not big fans of LinkedIn but go ahead if you have
               one!
             </p>
+            <img src={hiringProcess} alt="hiring process" />
           </JobCard>
         </JobContent>
       </JobsSection>
@@ -565,13 +567,8 @@ const JobCard = styled.div`
   color: #fff;
   padding: 1rem;
 
-  @media (min-width: 480px) {
-    img {
-      width: 150px;
-      position: absolute;
-      right: 50px;
-      top: -100px;
-    }
+  img {
+    width: 100%;
   }
 
   h3 {
