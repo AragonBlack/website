@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { createGlobalStyle } from 'styled-components'
 import nitti from '../assets/fonts/nitti.otf'
 import tungsten from '../assets/fonts/tungsten_medium.otf'
+import metaImage from '../assets/images/meta-image.png'
 import Grained from './Grained'
 
 if (typeof window !== `undefined`) {
@@ -162,7 +163,29 @@ const Layout = ({ children }) => (
   <>
     <GlobalStyle />
     <Helmet>
-      <title>Aragon Black</title>
+      <title>Aragon Black Team</title>
+      <meta name="title" content="Aragon Black Team" />
+      <meta
+        name="description"
+        content="Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.aragon.black/" />
+      <meta property="og:title" content="Aragon Black Team" />
+      <meta
+        property="og:description"
+        content="Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization."
+      />
+      <meta property="og:image" content={metaImage} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://www.aragon.black/" />
+      <meta property="twitter:title" content="Aragon Black Team" />
+      <meta
+        property="twitter:description"
+        content="Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization."
+      />
+      <meta property="twitter:image" content={metaImage} />
+
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
       <script crossOrigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145335364-2" />
