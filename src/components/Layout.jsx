@@ -176,7 +176,7 @@ const Layout = ({ children }) => (
         property="og:description"
         content="Aragon Black is proud member of the Aragon Flock, taking part in its fight towards freedom and decentralization."
       />
-      <meta property="og:image" content={metaImage} />
+      <meta property="og:image" content={`https://www.aragon.black${metaImage}`} />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://www.aragon.black/" />
       <meta property="twitter:title" content="Aragon Black Team" />
@@ -184,7 +184,7 @@ const Layout = ({ children }) => (
         property="twitter:description"
         content="Aragon Black is proud member of the Aragon Flock, taking part in its fight towards freedom and decentralization."
       />
-      <meta property="twitter:image" content={metaImage} />
+      <meta property="twitter:image" content={`https://www.aragon.black${metaImage}`} />
 
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
       <script crossOrigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver" />
