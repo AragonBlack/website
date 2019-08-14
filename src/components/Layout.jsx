@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { createGlobalStyle } from 'styled-components'
 import nitti from '../assets/fonts/nitti.otf'
 import tungsten from '../assets/fonts/tungsten_medium.otf'
-import metaImage from '../assets/images/meta-image.png'
+import metaImage from '../assets/images/meta-image.jpg'
 import Grained from './Grained'
 
 if (typeof window !== `undefined`) {

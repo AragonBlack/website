@@ -283,7 +283,6 @@ const Content = props => {
             <ul>
               <li>Develop, ship and maintain quality smart contracts for the Aragon platform</li>
               <li>Code review & elaboration of documentation</li>
-              <li>High quality of maintainable and cleanliness code</li>
               <li>Strong unit testing culture</li>
               <li>Ability to ship high quality, well crafted code running on Ethereum</li>
             </ul>
