@@ -167,14 +167,14 @@ const Layout = ({ children }) => (
       <meta name="title" content="Aragon Black Team" />
       <meta
         name="description"
-        content="Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization."
+        content="Aragon Black is proud member of the Aragon Flock, taking part in its fight towards freedom and decentralization."
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.aragon.black/" />
       <meta property="og:title" content="Aragon Black Team" />
       <meta
         property="og:description"
-        content="Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization."
+        content="Aragon Black is proud member of the Aragon Flock, taking part in its fight towards freedom and decentralization."
       />
       <meta property="og:image" content={metaImage} />
       <meta property="twitter:card" content="summary_large_image" />
@@ -182,7 +182,7 @@ const Layout = ({ children }) => (
       <meta property="twitter:title" content="Aragon Black Team" />
       <meta
         property="twitter:description"
-        content="Aragon Black is the third full-team of the Aragon project taking part in its fight for freedom and full decentralization."
+        content="Aragon Black is proud member of the Aragon Flock, taking part in its fight towards freedom and decentralization."
       />
       <meta property="twitter:image" content={metaImage} />
 
