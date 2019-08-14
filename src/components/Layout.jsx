@@ -194,7 +194,7 @@ const Layout = ({ children }) => (
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', UA-145335364-2);
+          gtag('config', 'UA-145335364-2');
         `}
       </script>
     </Helmet>
