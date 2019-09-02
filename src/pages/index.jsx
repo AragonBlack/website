@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import member3 from '../assets/images/alexandre.png'
 import member9 from '../assets/images/billy.png'
 import member2 from '../assets/images/cem.png'
-import member8 from '../assets/images/cory.png'
 import member4 from '../assets/images/daniel.png'
 import member7 from '../assets/images/deam.png'
 import member5 from '../assets/images/nolwenn.png'
@@ -222,17 +221,6 @@ const Content = props => {
               the crypto space by contributing to Giveth and has been in the community for a year now. He has since
               contributed to projects such as, Giveth Dapp, Giveth Riot Bot, Giveth Wall of Fame, Tennagraph, That
               Planning Suite and Aragon UI.
-            </p>
-          </Card>
-          <Card>
-            <img src={member8} alt="profile" />
-            <h3>Cory Dickson</h3>
-            <h4>Web3</h4>
-            <p>
-              Cory is a software engineer and aspiring mathematician with a background in neural networks, looking to
-              bring the Semantic Web practices into smart contract development. Co-founder of dOrg. His research has
-              been focused around using emerging language embedding processes for linked data. Hacking on EIP-1780
-              (Semantic Interface Registry)
             </p>
           </Card>
           <Card>
