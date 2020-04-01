@@ -1,46 +1,49 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { InView } from 'react-intersection-observer'
-import styled from 'styled-components'
-import member3 from '../assets/images/alexandre.png'
-import member9 from '../assets/images/billy.png'
-import member2 from '../assets/images/cem.png'
-import member4 from '../assets/images/daniel.png'
-import member7 from '../assets/images/deam.png'
-import member5 from '../assets/images/nolwenn.png'
-import member1 from '../assets/images/olivier.png'
-import member10 from '../assets/images/thibault.png'
-import member6 from '../assets/images/xavier.png'
-import hiringProcess from '../assets/images/hiring-process.png'
-import Layout from '../components/Layout'
-import Logo from '../components/Logo'
-import Navigation from '../components/Navigation'
-import Woodmark from '../components/Woodmark'
+import React, { useEffect, useRef, useState } from "react";
+import { InView } from "react-intersection-observer";
+import styled from "styled-components";
+import member3 from "../assets/images/alexandre.png";
+import member9 from "../assets/images/billy.png";
+import member2 from "../assets/images/cem.png";
+import member4 from "../assets/images/daniel.png";
+import member7 from "../assets/images/deam.png";
+import member5 from "../assets/images/nolwenn.png";
+import member1 from "../assets/images/olivier.png";
+import member10 from "../assets/images/thibault.png";
+import member6 from "../assets/images/xavier.png";
+import hiringProcess from "../assets/images/hiring-process.png";
+import Layout from "../components/Layout";
+import Logo from "../components/Logo";
+import Navigation from "../components/Navigation";
+import Woodmark from "../components/Woodmark";
 
 const Content = props => {
-  const [scrollIndex, setScrollIndex] = useState(null)
-  const [currentIndex, setCurrentIndex] = useState(null)
-  const items = Array.from({ length: 5 }, () => useRef(null))
+  const [scrollIndex, setScrollIndex] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+  const items = Array.from({ length: 5 }, () => useRef(null));
 
   useEffect(() => {
-    if (scrollIndex !== 4 && window.location.hash === '#jobs') {
-      setScrollIndex(4)
+    if (scrollIndex !== 4 && window.location.hash === "#jobs") {
+      setScrollIndex(4);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (scrollIndex != null) {
       window.scroll({
         top: items[scrollIndex].current.offsetTop,
         left: 0,
-        behavior: 'smooth',
-      })
-      setScrollIndex(null)
+        behavior: "smooth"
+      });
+      setScrollIndex(null);
     }
-  })
+  });
 
   return (
     <Container>
-      <Navigation currentIndex={currentIndex} setScrollIndex={idx => setScrollIndex(idx)} />
+      <Navigation
+        currentIndex={currentIndex}
+        setScrollIndex={idx => setScrollIndex(idx)}
+      />
 
       <HeroSection ref={items[4]}>
         <Logo />
@@ -52,16 +55,23 @@ const Content = props => {
       <Section ref={items[0]}>
         <InView as="div" onChange={inView => inView && setCurrentIndex(0)}>
           <p>
-            Aragon Black is the third full-team of the{' '}
-            <a href="https://aragon.org/" target="_blank" rel="noopener noreferrer">
+            Aragon Black was the third full-team of the{" "}
+            <a
+              href="https://aragon.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Aragon
-            </a>{' '}
-            project taking part in its fight for freedom and full decentralization.
+            </a>{" "}
+            project taking part in its fight for freedom and full
+            decentralization.
           </p>
           <p>
-            Aragon Black is the banner below which the Pando team has gathered to continue developing a decentralized
-            VCS enabling coordination and the rise of new collaborative projects, to carry the Aragon manifesto’s values
-            and finally to help in creating Aragon applications allowing human autonomy.
+            Aragon Black was the banner below which the Pando team had gathered
+            to continue developing a decentralized VCS and a continuous
+            fundraising scheme, to carry the Aragon manifesto’s values and
+            finally to help in creating Aragon applications allowing human
+            autonomy.
           </p>
           <p>Welcome</p>
         </InView>
@@ -72,7 +82,7 @@ const Content = props => {
               <br />
             </span>
             <span>
-              is
+              was
               <br />
             </span>
             <span>
@@ -87,28 +97,10 @@ const Content = props => {
         </div>
       </Section>
 
-      <Section ref={items[1]}>
-        <InView as="div" onChange={inView => inView && setCurrentIndex(1)}>
-          <p>
-            Aragon Black is a team whose core members come majoritarily from the PandoNetwork team [mostly known in the
-            ecosystem for the development of the pando protocol]. The PandoNetwork team has been working closely with
-            the Aragon ecosystem for almost a year now and has been the recipient of two Aragon Nest grants.
-          </p>
-          <p>
-            To strengthen its commitment to the Aragon movement, the PandoNetwork team has decided to apply to the Flock
-            program as Aragon Black. This first Flock proposal covers six months of work. However, if the Aragon
-            community lends us its trust, we intend to re-apply to this program for the long run.
-          </p>
-        </InView>
-        <div className="section-title">
-          <h2>Proposal</h2>
-        </div>
-      </Section>
-
       <ProposalSection ref={items[2]}>
         <div id="proposal-video">
           <iframe
-            style={{ overflow: 'hidden', height: '100%', width: '100%' }}
+            style={{ overflow: "hidden", height: "100%", width: "100%" }}
             height="100%"
             width="100%"
             src="https://www.youtube-nocookie.com/embed/AqjIWmiAidw"
@@ -136,12 +128,16 @@ const Content = props => {
             <h3>Olivier Sarrouy</h3>
             <h4>Tech Lead</h4>
             <p>
-              Olivier has a Master degree in Computer Sciences from Centrale/Supélec. After graduatıng he worked on
-              various open source projects before begınnıng a Ph.D ın philosophy. In 2015, he defended hıs Ph.D thesis
-              in Communication Sciences on web-based decentralized organizations. He then worked as a Professor at
-              University of Rennes 2 for three years discussing the economical, sociological and philosophical
-              implications of distributed organizations and blockchain technologies. He has now resigned from academıa
-              to work full time on the blockchain projects he leads.
+              Olivier has a Master degree in Computer Sciences from
+              Centrale/Supélec. After graduatıng he worked on various open
+              source projects before begınnıng a Ph.D ın philosophy. In 2015, he
+              defended hıs Ph.D thesis in Communication Sciences on web-based
+              decentralized organizations. He then worked as a Professor at
+              University of Rennes 2 for three years discussing the economical,
+              sociological and philosophical implications of distributed
+              organizations and blockchain technologies. He has now resigned
+              from academıa to work full time on the blockchain projects he
+              leads.
             </p>
           </Card>
           <Card>
@@ -149,14 +145,20 @@ const Content = props => {
             <h3>Cem Dagdelen</h3>
             <h4>Strategy Lead</h4>
             <p>
-              With a background in institutional Investment Banking, Cem has worked on establishing and raising for EM
-              ETFs. He won a Financial Innovation award in 2013 for designing a borderless credit system. After working
-              on startup financing advisory, Cem co-founded Horatii Partners, a research/advisory agency focused on
-              distributed governance. Horatii Partners is currently focused on synthesizing and promoting use cases for
-              DAOs and crypto economic primitives through mechanism design, business development and partnerships. Cem
-              is also building “DAOincubator”, an ecosystem catalyst which aims to aggregate research, funding, and
-              consulting which targets the betterment and implementation of DAO based initiatives. Cem is a competitive
-              sailor since age 9 and writes about art philosophy and critique for a Turkish lifestyle magazine.
+              With a background in institutional Investment Banking, Cem has
+              worked on establishing and raising for EM ETFs. He won a Financial
+              Innovation award in 2013 for designing a borderless credit system.
+              After working on startup financing advisory, Cem co-founded
+              Horatii Partners, a research/advisory agency focused on
+              distributed governance. Horatii Partners is currently focused on
+              synthesizing and promoting use cases for DAOs and crypto economic
+              primitives through mechanism design, business development and
+              partnerships. Cem is also building “DAOincubator”, an ecosystem
+              catalyst which aims to aggregate research, funding, and consulting
+              which targets the betterment and implementation of DAO based
+              initiatives. Cem is a competitive sailor since age 9 and writes
+              about art philosophy and critique for a Turkish lifestyle
+              magazine.
             </p>
           </Card>
           <Card>
@@ -164,12 +166,15 @@ const Content = props => {
             <h3>Alexandre Rouxel</h3>
             <h4>Research Lead</h4>
             <p>
-              Co-founder of Pando, Alexandre was a research engineer and Ph.d student at university Rennes 2 where he
-              studied the contemporary forms of our digital co-presences. Alexandre was a professor of communication
-              sciences between Rennes and Paris for 4 years before leaving its teaching and research activities to fully
-              devote itself to the possibilities opened up by blockchain technologies. Beside his work on the
-              Decentralized Licence, he initiates partnerships to create labs that will soon be experimenting on Pando
-              protocol.
+              Co-founder of Pando, Alexandre was a research engineer and Ph.d
+              student at university Rennes 2 where he studied the contemporary
+              forms of our digital co-presences. Alexandre was a professor of
+              communication sciences between Rennes and Paris for 4 years before
+              leaving its teaching and research activities to fully devote
+              itself to the possibilities opened up by blockchain technologies.
+              Beside his work on the Decentralized Licence, he initiates
+              partnerships to create labs that will soon be experimenting on
+              Pando protocol.
             </p>
           </Card>
           <Card>
@@ -177,12 +182,16 @@ const Content = props => {
             <h3>Daniel Shavit</h3>
             <h4>Community Lead</h4>
             <p>
-              Daniel is a governance researcher focused on the topics of protocolar governance, taxonomic classification
-              and experimentation of DAOs, as well as open-science with the Abstract Machine project for Pando
-              (immutable, uncensorable and self-governed journals) . Daniel has a degree in economics from Bocconi
-              University with a thesis on the perverse monetary, economic and political effects of natural resource
-              booms. In a previous life he worked as a payments consultant advising entities such as Atos Worldline,
-              Paypal, Mastercard, Unicredit and the Italian Banking Association on clearing and settlement and dispute
+              Daniel is a governance researcher focused on the topics of
+              protocolar governance, taxonomic classification and
+              experimentation of DAOs, as well as open-science with the Abstract
+              Machine project for Pando (immutable, uncensorable and
+              self-governed journals) . Daniel has a degree in economics from
+              Bocconi University with a thesis on the perverse monetary,
+              economic and political effects of natural resource booms. In a
+              previous life he worked as a payments consultant advising entities
+              such as Atos Worldline, Paypal, Mastercard, Unicredit and the
+              Italian Banking Association on clearing and settlement and dispute
               systems.
             </p>
           </Card>
@@ -191,11 +200,14 @@ const Content = props => {
             <h3>Nolwenn Jollivet</h3>
             <h4>Editorial Manager</h4>
             <p>
-              Co-founder of Pando, Nolwenn has a first master degree in History & Criticism of arts and a second in
-              Publishing & Creative Economy. She worked several years in cultural management, visual art galleries and
-              various festivals as team coordinator and executive assistant. As a result, she is experienced in pro
-              cultural worlds. Beside her coordination/organisation role, she has been a small format editor for the two
-              passed years and writes fiction in her free time.
+              Co-founder of Pando, Nolwenn has a first master degree in History
+              & Criticism of arts and a second in Publishing & Creative Economy.
+              She worked several years in cultural management, visual art
+              galleries and various festivals as team coordinator and executive
+              assistant. As a result, she is experienced in pro cultural worlds.
+              Beside her coordination/organisation role, she has been a small
+              format editor for the two passed years and writes fiction in her
+              free time.
             </p>
           </Card>
           <Card>
@@ -203,12 +215,15 @@ const Content = props => {
             <h3>Xavier Seignard</h3>
             <h4>UI/UX</h4>
             <p>
-              Xavier is a JavaScript expert and freelance creative technologist based in Nantes, France. His main focus
-              is on interactive experiences, be they with web technologies or electronics, often both. Obsessed with
-              JavaScript: React, Vue.js and Node, he is an outstanding designer when it comes to electronics and always
-              has an Arduino or a Teensy next to him to build real life interaction or setup a large scale LED system.
-              Active member of the POW collective and founder of it's company named Drangies, his work has been
-              presented in many exhibitions, events and live shows.
+              Xavier is a JavaScript expert and freelance creative technologist
+              based in Nantes, France. His main focus is on interactive
+              experiences, be they with web technologies or electronics, often
+              both. Obsessed with JavaScript: React, Vue.js and Node, he is an
+              outstanding designer when it comes to electronics and always has
+              an Arduino or a Teensy next to him to build real life interaction
+              or setup a large scale LED system. Active member of the POW
+              collective and founder of it's company named Drangies, his work
+              has been presented in many exhibitions, events and live shows.
             </p>
           </Card>
           <Card>
@@ -216,11 +231,13 @@ const Content = props => {
             <h3>Deam Hansen</h3>
             <h4>Frontend</h4>
             <p>
-              Deam has been a web developer for nearly 4 years, and is mostly self-taught through open source work.
-              Previously he worked for a small Danish startup, Peergrade, as a Full-stack developer. He started out in
-              the crypto space by contributing to Giveth and has been in the community for a year now. He has since
-              contributed to projects such as, Giveth Dapp, Giveth Riot Bot, Giveth Wall of Fame, Tennagraph, That
-              Planning Suite and Aragon UI.
+              Deam has been a web developer for nearly 4 years, and is mostly
+              self-taught through open source work. Previously he worked for a
+              small Danish startup, Peergrade, as a Full-stack developer. He
+              started out in the crypto space by contributing to Giveth and has
+              been in the community for a year now. He has since contributed to
+              projects such as, Giveth Dapp, Giveth Riot Bot, Giveth Wall of
+              Fame, Tennagraph, That Planning Suite and Aragon UI.
             </p>
           </Card>
           <Card>
@@ -228,12 +245,16 @@ const Content = props => {
             <h3>Billy Rennekamp</h3>
             <h4>Curve Bonding</h4>
             <p>
-              Billy is an artist, developer and co-founder of Bin Studio, a multidisciplinary research, design and
-              development studio based in Berlin, DE. In 2018 he received an ECF grant to continue work on
-              Clovers.Network, a game that rewards the creation of scarce art. He’s the author of EIP-1633 (Re-Fungible
-              Token) and active contributor to the Curation Market Community. He’s involved as a developer, researcher
-              and community member of a number of projects including Cosmos.Network, Gnosis.io, Relevant.community,
-              NewModels.io, Trust.support, MemeLords.com, ENSnifty.com and Doneth.org.
+              Billy is an artist, developer and co-founder of Bin Studio, a
+              multidisciplinary research, design and development studio based in
+              Berlin, DE. In 2018 he received an ECF grant to continue work on
+              Clovers.Network, a game that rewards the creation of scarce art.
+              He’s the author of EIP-1633 (Re-Fungible Token) and active
+              contributor to the Curation Market Community. He’s involved as a
+              developer, researcher and community member of a number of projects
+              including Cosmos.Network, Gnosis.io, Relevant.community,
+              NewModels.io, Trust.support, MemeLords.com, ENSnifty.com and
+              Doneth.org.
             </p>
           </Card>
           <Card>
@@ -241,94 +262,38 @@ const Content = props => {
             <h3>Thibault Boixière</h3>
             <h4>Chief Redactor</h4>
             <p>
-              Co-founder of Pando Network, Thibault has been journalist for two years, book reviewer and qualified in
-              modern literature and publishing. Thibault is also a writer in his free time. After a moment Ph.D student
-              in Canada where he studied literature he came back to join the Pando team. He’s interested in discourses
-              about the end of literature and particularly the possibilities of renewal of contemporary literary field.
+              Co-founder of Pando Network, Thibault has been journalist for two
+              years, book reviewer and qualified in modern literature and
+              publishing. Thibault is also a writer in his free time. After a
+              moment Ph.D student in Canada where he studied literature he came
+              back to join the Pando team. He’s interested in discourses about
+              the end of literature and particularly the possibilities of
+              renewal of contemporary literary field.
             </p>
           </Card>
         </TeamContent>
       </TeamSection>
-      <JobsSection ref={items[4]}>
-        <InView as="div" onChange={inView => inView && setCurrentIndex(4)}>
-          <div className="section-title">
-            <h2>JOBS</h2>
-          </div>
-        </InView>
-        <JobContent>
-          <JobCard>
-            <h3>Aragon Black - Solidity Engineer</h3>
-            <h4>Full Time</h4>
-            <p>
-              Aragon Black is searching for a Full-Time Solidity Engineer to join its ranks. You’ll work mostly on
-              Aragon Fundraising development, improve core-component of the Aragon Stack and keep on developing and
-              enhancing the pando protocol. You’ll work closely with the Tech Lead of Aragon Black and the research team
-              on Aragon Labs and aragonOS. We expect a good, even perfect awareness of Aragon Network and Ethereum.
-            </p>
-            <br />
-
-            <h4>Technical Requirements</h4>
-            <ul>
-              <li>Develop, ship and maintain quality smart contracts for the Aragon platform</li>
-              <li>Code review & elaboration of documentation</li>
-              <li>Strong unit testing culture</li>
-              <li>Ability to ship high quality, well crafted code running on Ethereum</li>
-            </ul>
-            <br />
-
-            <h4>Human Requirements</h4>
-            <ul>
-              <li>A strong passion for decentralization and a rage for political change!</li>
-              <li>Autonomous nature & proactive attitude</li>
-              <li>Patient & tenacious</li>
-              <li>Time self-management</li>
-            </ul>
-            <br />
-
-            <h4>Great-to-Have’s</h4>
-            <ul>
-              <li>Familiarity to the Aragon architecture</li>
-              <li>Awareness of bonding curves architectures</li>
-              <li>Cool attitude (Yep, we have a reputation to maintain :)</li>
-            </ul>
-            <br />
-
-            <h4>This way</h4>
-            <p>
-              To apply, please send an email to{' '}
-              <a href="mailto:nun@aragon.black" target="_blank">
-                nun@aragon.black
-              </a>{' '}
-              with the subject [Solidity Engineer] and the following informations; CV (make sure to highlight experience
-              and contribution in open-source projects), GitHub (obviously we expect open-source developers to have an
-              active one), Twitter/Reddit profiles. We’re certainly not big fans of LinkedIn but go ahead if you have
-              one!
-            </p>
-            <img src={hiringProcess} alt="hiring process" />
-          </JobCard>
-        </JobContent>
-      </JobsSection>
     </Container>
-  )
-}
+  );
+};
 
 // Prevent flickering because of Layout component rendering
 export default props => (
   <Layout>
     <Content />
   </Layout>
-)
+);
 
 const Container = styled.div`
   .section-title {
     text-transform: uppercase;
     color: rgba(114, 114, 114, 0.5);
-    font-family: 'Tungsten', sans-serif;
+    font-family: "Tungsten", sans-serif;
     font-size: 4em;
     font-weight: bold;
     line-height: 1;
   }
-`
+`;
 
 const HeroSection = styled.div`
   display: flex;
@@ -357,7 +322,7 @@ const HeroSection = styled.div`
   @media (min-width: 1366px) {
     flex-direction: row;
   }
-`
+`;
 
 const Section = styled.section`
   display: flex;
@@ -418,7 +383,7 @@ const Section = styled.section`
       margin-left: 12rem;
     }
   }
-`
+`;
 
 const ProposalSection = styled.section`
   display: flex;
@@ -449,7 +414,7 @@ const ProposalSection = styled.section`
       font-size: 7em;
     }
   }
-`
+`;
 
 const TeamSection = styled.section`
   display: flex;
@@ -465,7 +430,7 @@ const TeamSection = styled.section`
       font-size: 7em;
     }
   }
-`
+`;
 
 const TeamContent = styled.section`
   display: flex;
@@ -479,35 +444,7 @@ const TeamContent = styled.section`
   @media (min-width: 1366px) {
     margin: 12rem 16rem;
   }
-`
-
-const JobsSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-
-  @media (min-width: 1040px) {
-    .section-title {
-      font-size: 7em;
-    }
-  }
-`
-
-const JobContent = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 6rem 2rem;
-
-  @media (min-width: 1040px) {
-    margin: 6rem 8rem;
-  }
-  @media (min-width: 1366px) {
-    margin: 8rem 16rem;
-  }
-`
+`;
 
 const Card = styled.div`
   margin-bottom: 10rem;
@@ -534,18 +471,18 @@ const Card = styled.div`
 
   h3 {
     font-size: 32px;
-    font-family: 'Tungsten';
+    font-family: "Tungsten";
   }
   h4 {
     font-size: 24px;
-    font-family: 'Tungsten';
+    font-family: "Tungsten";
     color: rgb(112, 112, 112);
   }
 
   @media (min-width: 1400px) {
     width: 46%;
   }
-`
+`;
 
 const JobCard = styled.div`
   margin-bottom: 10rem;
@@ -560,11 +497,11 @@ const JobCard = styled.div`
 
   h3 {
     font-size: 42px;
-    font-family: 'Tungsten';
+    font-family: "Tungsten";
   }
   h4 {
     font-size: 32px;
-    font-family: 'Tungsten';
+    font-family: "Tungsten";
     color: rgb(112, 112, 112);
   }
   p,
@@ -585,4 +522,4 @@ const JobCard = styled.div`
     color: #ffffff;
     border-bottom: 2px solid #00f0e0;
   }
-`
+`;

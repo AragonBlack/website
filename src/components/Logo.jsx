@@ -1,37 +1,84 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 export default props => (
   <Wrapper>
-    <svg version="1.1" id="logo" viewBox="0 0 547 478" preserveAspectRatio="xMidYMid meet">
+    <svg
+      version="1.1"
+      id="logo"
+      viewBox="0 0 547 478"
+      preserveAspectRatio="xMidYMid meet"
+    >
       <title>aragon-black-logo</title>
       <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="linearGradient-1"
+        >
           <stop stopColor="#101414" offset="0%" />
           <stop stopColor="#1E2727" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="linearGradient-2"
+        >
           <stop stopColor="#101414" offset="0%" />
           <stop stopColor="#1E2727" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="linearGradient-3"
+        >
           <stop stopColor="#101414" offset="0%" />
           <stop stopColor="#1E2727" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="linearGradient-4"
+        >
           <stop stopColor="#00F0E0" offset="0%" />
           <stop stopColor="#5EAEFD" offset="100%" />
         </linearGradient>
-        <linearGradient x1="-2.22044605e-14%" y1="50%" x2="48.4955659%" y2="50%" id="linearGradient-5">
+        <linearGradient
+          x1="-2.22044605e-14%"
+          y1="50%"
+          x2="48.4955659%"
+          y2="50%"
+          id="linearGradient-5"
+        >
           <stop stopColor="#101414" offset="0%" />
           <stop stopColor="#1E2727" offset="100%" />
         </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+        <linearGradient
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="linearGradient-6"
+        >
           <stop stopColor="#00F0E0" offset="0%" />
           <stop stopColor="#5EAEFD" offset="100%" />
         </linearGradient>
       </defs>
-      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+      <g
+        id="Page-1"
+        stroke="none"
+        strokeWidth="1"
+        fill="none"
+        fillRule="evenodd"
+      >
         <g id="logo">
           <g id="bottom-left-wing" transform="translate(83.000000, 338.000000)">
             <path
@@ -39,9 +86,19 @@ export default props => (
               id="shape"
               fill="url(#linearGradient-1)"
             />
-            <g id="feathers" transform="translate(56.469784, 24.429704)" stroke="#0F1414">
-              <path d="M41.0302156,9.07029607 L69.0302156,81.0702961" id="Path-6" />
-              <path d="M1.03021561,1.07029607 L12.0302156,46.0702961" id="Path-7" />
+            <g
+              id="feathers"
+              transform="translate(56.469784, 24.429704)"
+              stroke="#0F1414"
+            >
+              <path
+                d="M41.0302156,9.07029607 L69.0302156,81.0702961"
+                id="Path-6"
+              />
+              <path
+                d="M1.03021561,1.07029607 L12.0302156,46.0702961"
+                id="Path-7"
+              />
             </g>
           </g>
           <g id="middle-left-wing" transform="translate(38.000000, 249.000000)">
@@ -50,11 +107,27 @@ export default props => (
               id="shape"
               fill="url(#linearGradient-2)"
             />
-            <g id="feathers" transform="translate(26.469784, 1.429704)" stroke="#0F1414">
-              <path d="M82.4635591,12.8057701 L116.059824,122.574575" id="Path-6" />
-              <path d="M56.8234235,14.5821803 L76.5262759,114.92754" id="Path-2" />
-              <path d="M29.5239903,5.68803308 L33.5962648,95.1681554" id="Path-7" />
-              <path d="M1.01806863,1.62075479 L3.05420589,48.3944551" id="Path-7" />
+            <g
+              id="feathers"
+              transform="translate(26.469784, 1.429704)"
+              stroke="#0F1414"
+            >
+              <path
+                d="M82.4635591,12.8057701 L116.059824,122.574575"
+                id="Path-6"
+              />
+              <path
+                d="M56.8234235,14.5821803 L76.5262759,114.92754"
+                id="Path-2"
+              />
+              <path
+                d="M29.5239903,5.68803308 L33.5962648,95.1681554"
+                id="Path-7"
+              />
+              <path
+                d="M1.01806863,1.62075479 L3.05420589,48.3944551"
+                id="Path-7"
+              />
             </g>
           </g>
           <g id="upper-left-wing" transform="translate(12.000000, 65.000000)">
@@ -63,11 +136,27 @@ export default props => (
               id="upper-left-wing-shape"
               fill="url(#linearGradient-3)"
             />
-            <g id="feathers" transform="translate(28.383085, 83.414967)" stroke="#0F1414">
-              <path d="M95.1336214,32.4705882 L107.390793,113.658448" id="Path-6" />
-              <path d="M80.0808458,27.1096909 L80.4216282,116.842707" id="Path-2" />
-              <path d="M59.6873161,18.2647059 L52.7547517,106.069465" id="Path-4" />
-              <path d="M40.5749815,12.1764706 L25.3420398,102.485294" id="Path-7" />
+            <g
+              id="feathers"
+              transform="translate(28.383085, 83.414967)"
+              stroke="#0F1414"
+            >
+              <path
+                d="M95.1336214,32.4705882 L107.390793,113.658448"
+                id="Path-6"
+              />
+              <path
+                d="M80.0808458,27.1096909 L80.4216282,116.842707"
+                id="Path-2"
+              />
+              <path
+                d="M59.6873161,18.2647059 L52.7547517,106.069465"
+                id="Path-4"
+              />
+              <path
+                d="M40.5749815,12.1764706 L25.3420398,102.485294"
+                id="Path-7"
+              />
               <path d="M25.3420398,0 L1.01368159,86.25" id="Path-7" />
             </g>
           </g>
@@ -94,7 +183,7 @@ export default props => (
       </g>
     </svg>
   </Wrapper>
-)
+);
 
 const Wrapper = styled.div`
   .logo {
@@ -115,4 +204,4 @@ const Wrapper = styled.div`
       stroke-dashoffset: 0;
     }
   }
-`
+`;

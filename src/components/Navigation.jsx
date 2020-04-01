@@ -1,28 +1,36 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-const items = ['About', 'Proposal', 'Values', 'Team', 'Jobs']
+const items = ["About", "Values", "Team"];
 
 export default props => {
-  const { currentIndex, setScrollIndex } = props
+  const { currentIndex, setScrollIndex } = props;
   const renderContent = items.map((item, idx) => (
-    <li key={item} className={currentIndex === idx ? 'active' : ''} onClick={() => setScrollIndex(idx)}>
+    <li
+      key={item}
+      className={currentIndex === idx ? "active" : ""}
+      onClick={() => setScrollIndex(idx)}
+    >
       {item}
     </li>
-  ))
+  ));
   return (
     <Nav>
       <ul>
         {renderContent}
         <li>
-          <a href="https://blog.aragon.black/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/AragonBlack/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Blog
           </a>
         </li>
       </ul>
     </Nav>
-  )
-}
+  );
+};
 
 const Nav = styled.div`
   display: none;
@@ -39,7 +47,7 @@ const Nav = styled.div`
 
     ul {
       color: rgba(114, 114, 114, 0.5);
-      font-family: 'Tungsten', sans-serif;
+      font-family: "Tungsten", sans-serif;
       font-size: 28px;
       text-transform: uppercase;
       display: flex;
@@ -88,4 +96,4 @@ const Nav = styled.div`
       transform: rotate(-90deg);
     }
   }
-`
+`;
